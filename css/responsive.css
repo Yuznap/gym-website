@@ -1,0 +1,76 @@
+@media (max-width: 966px) {
+  /* Common */
+  .show {
+    display: block;
+  }
+  .hidden {
+    display: none;
+  }
+  /* Navigation Bar Css */
+
+  .nav-bar {
+    padding: 1rem;
+  }
+
+  .nav-bar-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    gap: var(--flex-gap-m);
+    background-color: var(--bg-dark);
+    min-height: 100vh;
+    min-width: 100%;
+    font-size: 1.4rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-transform: uppercase;
+    font-weight: var(--fw-semibold);
+  }
+
+  .brand-name {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+  }
+
+  .logo-brand-container {
+    flex-wrap: nowrap;
+  }
+  .logo-image {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+  .nav-item,
+  .nav-btn {
+    margin-top: 1rem;
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+  .nav-icon {
+    display: block;
+  }
+  .nav-btn {
+    align-items: center;
+    margin: 4% auto;
+    padding: 0.6rem 13%;
+  }
+  .open-close-menu-icon {
+    font-size: 1.4rem;
+  }
+  .open-menu-icon {
+    display: block;
+  }
+  .close-menu-icon {
+    display: none;
+  }
+  .nav-bar-hide {
+    left: -999px;
+  }
+  .open-close-menu-icon {
+    display: block;
+  }
+}
