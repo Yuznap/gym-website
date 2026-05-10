@@ -182,3 +182,7 @@ header {
 .open-close-menu-icon {
   display: none;
 }
+
+body{
+  height : 300vh;
+}
