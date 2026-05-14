@@ -11,16 +11,20 @@ const navBarPosition = function () {
   navBarLinks.style.top = `${hight}px`;
 };
 navBarPosition();
-
+window.addEventListener("resize", navBarPosition);
 // Opening-Closing Nav Bar
 
-openCloseMenuIcon.addEventListener("click", function () {
+const changeMenuIcon = function (prop1, prop2) {
+  closeMenuIcon.style.display = prop1;
+  openMenuIcon.style.display = prop2;
+};
+
+const openCloseMenu = function () {
   navBarLinks.classList.toggle("nav-bar-hide");
   if (!navBarLinks.classList.contains("nav-bar-hide")) {
-    closeMenuIcon.style.display = "block";
-    openMenuIcon.style.display = "none";
+    changeMenuIcon("block", "none");
   } else {
-    closeMenuIcon.style.display = "none";
-    openMenuIcon.style.display = "block";
+    changeMenuIcon("none", "block");
   }
-});
+};
+openCloseMenuIcon.addEventListener("click", openCloseMenu);
