@@ -1,13 +1,9 @@
 @media (max-width: 966px) {
-  /* Common */
-  .show {
-    display: block;
-  }
-  .hidden {
-    display: none;
-  }
   /* Navigation Bar Css */
-
+  header {
+    position: fixed;
+    z-index: 1000;
+  }
   .nav-bar {
     padding: 1rem;
   }
@@ -27,6 +23,8 @@
     align-items: flex-start;
     text-transform: uppercase;
     font-weight: var(--fw-semibold);
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 1000;
   }
 
   .brand-name {
@@ -45,6 +43,7 @@
   .nav-btn {
     margin-top: 1rem;
     margin-left: 5rem;
+
     display: flex;
     align-items: center;
     gap: 1.2rem;
@@ -61,16 +60,102 @@
   .open-close-menu-icon {
     font-size: 1.4rem;
   }
+
   .open-menu-icon {
     display: block;
   }
   .close-menu-icon {
     display: none;
+    font-size: 1.7rem;
   }
   .nav-bar-hide {
-    left: -999px;
+    transform: translateX(-100%);
   }
   .open-close-menu-icon {
     display: block;
+  }
+
+  /* Hero Seciton Resposive */
+
+  .hero-section {
+    height: auto;
+  }
+  .hero-section .section-content {
+    grid-template-columns: auto;
+    grid-template-rows: 100vh auto;
+  }
+  .hero-tag-line {
+    gap: 0.8rem;
+    font-size: var(--fs-md);
+  }
+
+  .hero-tag-line::after {
+    width: 10%;
+  }
+
+  .hero-head-line > span {
+    font-size: 3.5rem;
+  }
+
+  .hero-head-line .highlight-hero {
+    font-size: clamp(3rem, 17.7vw, 4.2rem);
+  }
+  .hero-description {
+    width: 100%;
+  }
+
+  .hero-content {
+    z-index: 2;
+    align-self: center;
+    min-width: 0%;
+    max-width: 100%;
+  }
+  .hero-buttons {
+    margin-top: 15%;
+    flex-direction: column;
+    max-width: 30rem;
+  }
+  .hero-btn {
+    padding: 0.9rem 1.1rem;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-md);
+  }
+  .hero-buttons .hero-btn-2 {
+    border: 2px solid var(--border-accent);
+  }
+  .hero-image {
+    grid-area: 1 / 1 / 3 / 2;
+    z-index: 1;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  img[alt="hero-model"] {
+    object-fit: contain;
+    max-width: 100%;
+    opacity: 15%;
+  }
+
+  .hero-proof-container {
+    grid-area: 2 / 1 / 3 / 2;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-proof {
+    width: 70%;
+    /* background-color: var(--bg-dark-card);
+    padding: 0.5rem 1rem;
+    border-radius: 3px; */
+  }
+  .hero-badge {
+    font-size: 3.8rem;
+  }
+  .hero-states-no {
+    font-size: 1.6rem;
+  }
+  .hero-states-label {
+    font-size: 1.1rem;
   }
 }
